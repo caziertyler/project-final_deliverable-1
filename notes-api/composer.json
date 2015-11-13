@@ -1,14 +1,19 @@
 {
-  "name": "donbstringham/notes-api",
+  "name": "caziertyler/notes-api",
   "description": "Notes API Project for CS3620",
   "minimum-stability": "stable",
   "license": "proprietary",
   "authors": [
     {
-      "name": "Don B. Stringham",
-      "email": "donbstringham@gmail.com"
+      "name": "Tyler Cazier",
+      "email": "caziertyler@gmail.com"
     }
   ],
+  "autoload": {
+    "psr-4": {
+      "Notes\\": "src/"
+    }
+  },
   "require-dev": {
     "peridot-php/peridot": "1.16.0",
     "peridot-php/leo": "1.4.0",
@@ -19,10 +24,5 @@
   },
   "require": {
     "silex/silex": "v1.3.4"
-  },
-  "autoload": {
-    "psr-4": {
-      "Notes\\": "src/"
-    }
   }
 }

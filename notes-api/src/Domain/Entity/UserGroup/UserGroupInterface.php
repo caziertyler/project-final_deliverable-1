@@ -1,23 +1,39 @@
 <?php
 /**
- * File name: UserGroupInterface.php
- * Project: notes-api
- * PHP version 5
- * @category  PHP
- * @package   Notes\Domain\Entity\UserGroup
- * @author    donbstringham <donbstringham@gmail.com>
- * @copyright 2015 © donbstringham
- * @license   http://opensource.org/licenses/MIT MIT
- * @version   GIT: <git_id>
- * @link      http://donbstringham.us
- * $LastChangedDate$
- * $LastChangedBy$
+ * Created by PhpStorm.
+ * User: tylercazier
+ * Date: 11/3/15
+ * Time: 7:23 PM
  */
 
 namespace Notes\Domain\Entity\UserGroup;
 
+use Notes\Domain\Entity\User;
+
 interface UserGroupInterface
 {
+    /**
+     * @return Notes\Domain\ValueObject\Uuid
+     */
+    public function getId();
+
+    /**
+     * @return StringLiteral
+     */
     public function getName();
+
+    /**
+     * @return array
+     */
     public function getUsers();
+
+    /**
+     * @return bool
+     */
+    public function addUser();
+
+    /**
+     * @return  bool
+     */
+    public function removeUser();
 }
